@@ -11,3 +11,6 @@ __pycache__/
 
 # Testing
 .pytest_cache/
+
+# Raw Data
+data/
