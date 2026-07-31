@@ -1,42 +1,10 @@
-import sqlite3
-import json
+import psycopg2
 import os
 
-DB_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "local_store.db")
+# Hardcoded for local dev right now; will move to .env later
+DB_URL = "postgresql://postgres:password@localhost:5432/clinical_rag"
 
 def get_connection():
-    """Returns a connection to the SQLite database."""
-    # Ensure the data directory exists
-    os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
-    conn = sqlite3.connect(DB_PATH)
-    conn.row_factory = sqlite3.Row
+    """Returns a connection to the Postgres database."""
+    conn = psycopg2.connect(DB_URL)
     return conn
-
-def init_db():
-    """Initializes the database schema."""
-    conn = get_connection()
-    cursor = conn.cursor()
-    
-    cursor.execute("""
-        CREATE TABLE IF NOT EXISTS documents (
-            id TEXT PRIMARY KEY,
-            source TEXT,
-            title TEXT,
-            sections TEXT,
-            metadata TEXT
-        )
-    """)
-    
-    cursor.execute("""
-        CREATE TABLE IF NOT EXISTS chunks (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            parent_doc_id TEXT,
-            section TEXT,
-            chunk_index INTEGER,
-            text TEXT,
-            FOREIGN KEY(parent_doc_id) REFERENCES documents(id)
-        )
-    """)
-    
-    conn.commit()
-    conn.close()

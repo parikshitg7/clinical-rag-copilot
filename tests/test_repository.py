@@ -1,19 +1,17 @@
 import pytest
-import os
-from src.database import init_db, get_connection, DB_PATH
+from src.database import get_connection
 from src.schema import Document, Chunk
 from src.repository import save_document, save_chunks, get_chunks_by_doc_id
 
 @pytest.fixture(autouse=True)
 def setup_test_db():
     """Ensure we are working with a clean test database."""
-    # Use an in-memory DB or a separate test file. 
-    # For simplicity, we'll re-init and clear the local file for tests.
-    init_db()
     conn = get_connection()
-    conn.execute("DELETE FROM chunks")
-    conn.execute("DELETE FROM documents")
+    cursor = conn.cursor()
+    # Postgres uses TRUNCATE to clear tables quickly and completely
+    cursor.execute("TRUNCATE TABLE chunks, documents CASCADE;")
     conn.commit()
+    cursor.close()
     conn.close()
     yield
 
@@ -33,11 +31,11 @@ def test_repository_round_trip():
         Chunk(parent_doc_id="PMID:12345", section="abstract", chunk_index=1, text="abstract.")
     ]
     
-    # 2. Save Document and Chunks to SQLite
+    # 2. Save Document and Chunks to Postgres
     save_document(doc)
     save_chunks(chunks)
     
-    # 3. Retrieve chunks back from SQLite
+    # 3. Retrieve chunks back from Postgres
     retrieved_chunks = get_chunks_by_doc_id("PMID:12345")
     
     # 4. Assert round-trip success
