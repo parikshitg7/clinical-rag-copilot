@@ -67,3 +67,26 @@ def update_chunk_embedding(chunk_id: int, embedding: list[float]):
     conn.commit()
     cursor.close()
     conn.close()
+
+def search_similar_chunks(query_embedding: list[float], limit: int = 5) -> list[dict]:
+    """
+    Searches the database for chunks closest to the query embedding 
+    using pgvector's cosine distance operator (<=>).
+    """
+    conn = get_connection()
+    cursor = conn.cursor(cursor_factory=RealDictCursor)
+    
+    # We calculate 1 - distance to get a 'similarity score' (higher is better)
+    # We order by the closest distance ascending.
+    cursor.execute("""
+        SELECT id, parent_doc_id, section, chunk_index, text, 
+               1 - (embedding <=> %s::vector) AS similarity 
+        FROM chunks 
+        ORDER BY embedding <=> %s::vector 
+        LIMIT %s;
+    """, (str(query_embedding), str(query_embedding), limit))
+    
+    rows = cursor.fetchall()
+    cursor.close()
+    conn.close()
+    return rows

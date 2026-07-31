@@ -1,17 +1,26 @@
 from sentence_transformers import SentenceTransformer
 from typing import List
 
-# We are using the exact MedCPT Article Encoder dictated by the Project Spec
-MODEL_NAME = "ncbi/MedCPT-Article-Encoder"
+# MedCPT uses two separate models: one for articles, one for user queries
+ARTICLE_MODEL_NAME = "ncbi/MedCPT-Article-Encoder"
+QUERY_MODEL_NAME = "ncbi/MedCPT-Query-Encoder"
 
-# Load the model (this will download the model weights the first time it runs)
-model = SentenceTransformer(MODEL_NAME)
+# Load both models into memory
+article_model = SentenceTransformer(ARTICLE_MODEL_NAME)
+query_model = SentenceTransformer(QUERY_MODEL_NAME)
 
 def generate_embedding(text: str) -> List[float]:
     """
-    Converts a string of text into a mathematical vector (embedding) 
+    Converts a chunk of text from the database into a vector 
     using the MedCPT Article Encoder.
     """
-    # Generate the embedding and convert the numpy array to a standard Python list of floats
-    embedding = model.encode(text)
+    embedding = article_model.encode(text)
+    return embedding.tolist()
+
+def generate_query_embedding(query: str) -> List[float]:
+    """
+    Converts a user's question into a vector 
+    using the MedCPT Query Encoder.
+    """
+    embedding = query_model.encode(query)
     return embedding.tolist()
