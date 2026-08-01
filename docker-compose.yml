@@ -13,5 +13,16 @@ services:
     volumes:
       - pgdata:/var/lib/postgresql/data
 
+  api:
+    build: .
+    container_name: clinical_rag_api
+    ports:
+      - "8000:8000"
+    environment:
+      # Notice the host here is 'db', which matches the service name above
+      - DATABASE_URL=postgresql://postgres:password@db:5432/clinical_rag
+    depends_on:
+      - db
+
 volumes:
   pgdata:
