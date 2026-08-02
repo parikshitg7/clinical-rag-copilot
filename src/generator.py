@@ -38,7 +38,7 @@ def generate_clinical_answer(question: str, chunks: List[Chunk]) -> ClinicalAnsw
 
     # Instructor handles the JSON schema enforcement automatically
     answer = client.chat.completions.create(
-        model="llama3-70b-8192",  # Fast and highly capable of strict instruction following
+        model="llama-3.3-70b-versatile",  # Fast and highly capable of strict instruction following
         messages=[
             {"role": "system", "content": SYSTEM_PROMPT},
             {"role": "user", "content": user_prompt}

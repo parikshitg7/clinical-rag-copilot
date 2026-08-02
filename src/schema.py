@@ -1,6 +1,19 @@
 from pydantic import BaseModel, Field
 from typing import Dict, Any, Optional, List
 
+
+from enum import Enum
+from pydantic import BaseModel
+
+class Label(str, Enum):
+    SUPPORTED = "supported"
+    UNSUPPORTED = "unsupported"
+    NOT_ENOUGH_INFO = "not_enough_info"
+
+class VerificationResult(BaseModel):
+    label: Label
+    reasoning: str # Highly recommended to force the LLM to think before classifying
+
 class Document(BaseModel):
     """Normalized representation of a clinical document."""
     id: str
