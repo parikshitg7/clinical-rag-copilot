@@ -7,7 +7,6 @@ def parse_pubmed_xml_record(xml_string: str) -> Document:
     try:
         root = ET.fromstring(xml_string)
     except ET.ParseError:
-        # Handle malformed XML edge case
         return Document(id="unknown", source="pubmed", text="")
     
     pmid_elem = root.find(".//PMID")
@@ -32,34 +31,6 @@ def parse_pubmed_xml_record(xml_string: str) -> Document:
     return Document(
         id=doc_id,
         source="pubmed",
-        title=title,
-        sections=sections,
-        text=full_text
-    )
-
-def parse_ctgov_json_record(trial_dict: Dict[str, Any]) -> Document:
-    """Parses a single raw ClinicalTrials.gov JSON dictionary into a Document."""
-    protocol = trial_dict.get("protocolSection", {})
-    ident_module = protocol.get("identificationModule", {})
-    desc_module = protocol.get("descriptionModule", {})
-    
-    nct_id = ident_module.get("nctId", "unknown")
-    title = ident_module.get("officialTitle", ident_module.get("briefTitle", "Untitled"))
-    
-    brief_summary = desc_module.get("briefSummary", "")
-    detailed_desc = desc_module.get("detailedDescription", "")
-    
-    sections = {}
-    if brief_summary:
-        sections["Brief Summary"] = brief_summary
-    if detailed_desc:
-        sections["Detailed Description"] = detailed_desc
-        
-    full_text = f"{brief_summary}\n{detailed_desc}".strip()
-    
-    return Document(
-        id=nct_id,
-        source="clinicaltrials.gov",
         title=title,
         sections=sections,
         text=full_text
