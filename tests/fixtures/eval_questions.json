@@ -1,27 +1,12 @@
 [
   {
-    "question_id": "bioasq_01",
-    "question": "Is the protein p16 a valid biomarker for cervical cancer detection?",
-    "gold_source_ids": ["11279524", "12470729"]
+    "question_id": "eval_001",
+    "question": "What is the primary pharmacological effect of Metformin in managing type 2 diabetes?",
+    "gold_source_ids": ["12345678", "87654321"]
   },
   {
-    "question_id": "bioasq_02",
-    "question": "Does taking low-dose aspirin reduce the risk of preeclampsia in pregnant women?",
-    "gold_source_ids": ["30134168", "28859940"]
-  },
-  {
-    "question_id": "bioasq_03",
-    "question": "Are BRAF mutations associated with worse prognosis in colorectal cancer?",
-    "gold_source_ids": ["22898950", "22327618"]
-  },
-  {
-    "question_id": "bioasq_04",
-    "question": "Is SGLT2 inhibition effective for treating heart failure with preserved ejection fraction?",
-    "gold_source_ids": ["34449189", "35150517"]
-  },
-  {
-    "question_id": "bioasq_05",
-    "question": "What is the recommended first-line pharmacological treatment for uncomplicated hypertension?",
-    "gold_source_ids": ["24432775", "29133356"]
+    "question_id": "eval_002",
+    "question": "How do SGLT2 inhibitors affect cardiovascular outcomes in heart failure patients?",
+    "gold_source_ids": ["11223344", "55667788"]
   }
 ]

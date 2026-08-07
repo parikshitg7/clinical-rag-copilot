@@ -9,7 +9,7 @@ class EvalQuestion(BaseModel):
     question: str
     gold_source_ids: List[str]
 
-def load_eval_questions(filepath: str | Path) -> List[EvalQuestion]:
+def load_eval_questions(filepath: str | Path = "tests/fixtures/eval_questions.json") -> List[EvalQuestion]:
     """Loads and validates evaluation questions from a JSON fixture."""
     path = Path(filepath)
     if not path.exists():
@@ -18,5 +18,5 @@ def load_eval_questions(filepath: str | Path) -> List[EvalQuestion]:
     with open(path, "r", encoding="utf-8") as f:
         data = json.load(f)
         
-    # Pydantic automatically validates the JSON structure against the EvalQuestion model
+    # Pydantic validates the JSON structure against EvalQuestion
     return [EvalQuestion(**item) for item in data]
