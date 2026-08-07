@@ -1,0 +1,16 @@
+{
+    "dataset_size": 2,
+    "baseline_rag": {
+        "total_claims_made": 0,
+        "unsupported_claims": 0,
+        "hallucination_rate": 0.0
+    },
+    "verified_langgraph": {
+        "total_claims_made": 0,
+        "unsupported_claims": 0,
+        "hallucination_rate": 0.0
+    },
+    "improvement": {
+        "absolute_reduction": 0.0
+    }
+}

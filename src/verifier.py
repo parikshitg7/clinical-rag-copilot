@@ -1,4 +1,3 @@
-# src/verifier.py
 import os
 from dotenv import load_dotenv
 import instructor
@@ -24,10 +23,10 @@ def verify_claim(claim: Claim, source_chunk_text: str) -> Label:
     
     Claim: {claim.text}
     
-    Rules for Classification:
-    1. SUPPORTED: The claim is explicitly stated or logically entailed by the Source Text.
-    2. UNSUPPORTED: The claim is directly contradicted by the Source Text.
-    3. NOT_ENOUGH_INFO: The Source Text does not mention the topic, or lacks sufficient detail to prove or disprove the claim.
+    Rules for Classification (Output exact lowercase strings):
+    1. "supported": The claim is explicitly stated or logically entailed by the Source Text.
+    2. "unsupported": The claim is directly contradicted by the Source Text.
+    3. "not_enough_info": The Source Text does not mention the topic, or lacks sufficient detail to prove or disprove the claim.
 
     Provide brief reasoning before outputting your label.
     """
