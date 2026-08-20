@@ -1,0 +1,280 @@
+{
+    "evaluations": [
+        {
+            "id": "eval_q_1",
+            "question": "What type of cancers is Bortezomib used to treat?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 0
+            },
+            "langgraph": {
+                "total_claims": 1,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_2",
+            "question": "What was the effect of sinapic acid pretreatment on serum BUN, CREA, and UA levels in a rat model of LPS-induced acute kidney injury?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 1
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_3",
+            "question": "Does pressure-lowering treatment after spontaneous intracerebral haemorrhage increase the risk of serious adverse events?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 0
+            },
+            "langgraph": {
+                "total_claims": 1,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_4",
+            "question": "What proportion of methamphetamine users had any sex-specific left ventricular end-diastolic diameter abnormality as detected by point-of-care ultrasound?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 0
+            },
+            "langgraph": {
+                "total_claims": 1,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_5",
+            "question": "What percentage of respondents reported that the 'Lens of Emotional Connection' training module provided them with valuable knowledge about emotional connection?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 0
+            },
+            "langgraph": {
+                "total_claims": 1,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_6",
+            "question": "What was the outcome of the treatment in the 69-year-old female patient with stage IV non-small cell lung carcinoma and congenital achondroplasia after four treatment cycles?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 1
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_7",
+            "question": "What is the association between high LILRB4 expression and the response to immunotherapy in ovarian cancer?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 1
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_8",
+            "question": "In young women with Hashimoto's disease, which group had the most pronounced decrease in antibody titers after receiving vitamin D supplementation?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 1
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_9",
+            "question": "What is the effect of Yiqi Yangyin Qingre decoction on proteinuria and renal function in diabetic nephropathy?",
+            "baseline": {
+                "total_claims": 0,
+                "unsupported": 0
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_10",
+            "question": "What was the incidence of in-hospital hypoglycemia in the external validation cohort of LADA inpatients in this study?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 0
+            },
+            "langgraph": {
+                "total_claims": 1,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_11",
+            "question": "According to the text, what is the effect of adding olive oil to an already oil-restricted whole-food plant-based dietary pattern on its low-density lipoprotein cholesterol and body-weight benefits?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 1
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_12",
+            "question": "What was the prevalence of low adequacy of care observed in black men with low income according to the study?",
+            "baseline": {
+                "total_claims": 0,
+                "unsupported": 0
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_13",
+            "question": "What percentage of pediatric oral liquid formulations containing sorbitol as an excipient had a maximum daily sorbitol amount categorized as level 0, 1, 2, and 3, respectively?",
+            "baseline": {
+                "total_claims": 4,
+                "unsupported": 4
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_14",
+            "question": "What happens to cell proliferation and apoptosis in human kidney-2 cells when SNHG12 is silenced under high glucose conditions?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 1
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_15",
+            "question": "What was the range of mean inhibition zone diameters produced by the extracts in the agar well diffusion method?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 1
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_16",
+            "question": "What was the 30-day MACE rate for patients undergoing CHIP-PCI in this study?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 1
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_17",
+            "question": "What is a potential consequence of excessive use of smartphones, gaming, and digital media, particularly at night, on the physical and neurocognitive growth of children and adolescents?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 0
+            },
+            "langgraph": {
+                "total_claims": 1,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_18",
+            "question": "What is the adjusted odds ratio for the association between HARM and early neurologic deterioration in patients who underwent mechanical thrombectomy for acute ischemic stroke?",
+            "baseline": {
+                "total_claims": 0,
+                "unsupported": 0
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_19",
+            "question": "What regimen may help identify patients with advanced BTC more likely to benefit from treatment, according to the exploratory genomic classifier based on DDR alteration and TMB-H?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 1
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_20",
+            "question": "What is required for safe anesthetic care for pediatric endoscopy and radiology procedures according to recent evidence?",
+            "baseline": {
+                "total_claims": 2,
+                "unsupported": 2
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_21",
+            "question": "What were the five themes identified by adults with intellectual and developmental disabilities as barriers or facilitators to primary care access in the study?",
+            "baseline": {
+                "total_claims": 5,
+                "unsupported": 5
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_22",
+            "question": "What is the direction of change in circulating spexin levels in patients with type 2 diabetes mellitus (T2DM) compared to non-diabetic controls?",
+            "baseline": {
+                "total_claims": 0,
+                "unsupported": 0
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_23",
+            "question": "What was the most common critical action omitted by learners during the simulation of managing a 13-year-old nonbinary patient with toxic shock?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 1
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        }
+    ]
+}

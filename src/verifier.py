@@ -1,14 +1,18 @@
 import os
 from dotenv import load_dotenv
 import instructor
-from groq import Groq
+from openai import OpenAI
 from src.schema import Claim, VerificationResult, Label
 
-# Load environment variables (ensure GROQ_API_KEY is in your .env)
 load_dotenv()
 
-# Initialize the Groq client and wrap it with Instructor
-client = instructor.from_groq(Groq())
+# Initialize the OpenAI client and wrap it with Instructor
+client = instructor.from_openai(
+    OpenAI(
+        api_key=os.getenv("OPENAI_API_KEY", "dummy-key-for-tests"),
+        base_url=os.getenv("OPENAI_BASE_URL")
+    )
+)
 
 def verify_claim(claim: Claim, source_chunk_text: str) -> Label:
     """
@@ -32,7 +36,7 @@ def verify_claim(claim: Claim, source_chunk_text: str) -> Label:
     """
 
     result = client.chat.completions.create(
-        model="llama-3.3-70b-versatile",
+        model="openai/gpt-oss-120b",  # <-- Updated Model
         response_model=VerificationResult,
         messages=[
             {"role": "system", "content": "You are a highly strict clinical verification system."},

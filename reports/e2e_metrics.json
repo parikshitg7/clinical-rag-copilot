@@ -1,16 +1,17 @@
 {
-    "dataset_size": 2,
+    "questions_evaluated_so_far": 23,
+    "total_target_questions": 100,
     "baseline_rag": {
-        "total_claims_made": 0,
-        "unsupported_claims": 0,
-        "hallucination_rate": 0.0
+        "total_claims_made": 27,
+        "unsupported_claims": 21,
+        "hallucination_rate": 0.7778
     },
     "verified_langgraph": {
-        "total_claims_made": 0,
+        "total_claims_made": 6,
         "unsupported_claims": 0,
         "hallucination_rate": 0.0
     },
     "improvement": {
-        "absolute_reduction": 0.0
+        "absolute_reduction": 0.7778
     }
 }

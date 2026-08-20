@@ -71,9 +71,9 @@ def regenerate_node(state: AgentState):
     
     user_prompt = f"Question: {question}\n\nContext:\n{context_text}\n\nFeedback from Verifier:\n{feedback}"
     
-    # Direct LLM call using your existing patched client and system prompt
+    # Direct LLM call using your existing patched client and strict flat-property instructions
     new_answer = client.chat.completions.create(
-        model="llama-3.3-70b-versatile",
+        model="openai/gpt-oss-120b",
         messages=[
             {"role": "system", "content": SYSTEM_PROMPT},
             {"role": "user", "content": user_prompt}

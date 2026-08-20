@@ -1,12 +1,702 @@
 [
-  {
-    "question_id": "eval_001",
-    "question": "What is the primary pharmacological effect of Metformin in managing type 2 diabetes?",
-    "gold_source_ids": ["12345678", "87654321"]
-  },
-  {
-    "question_id": "eval_002",
-    "question": "How do SGLT2 inhibitors affect cardiovascular outcomes in heart failure patients?",
-    "gold_source_ids": ["11223344", "55667788"]
-  }
+    {
+        "id": "eval_q_1",
+        "question": "What type of cancers is Bortezomib used to treat?",
+        "gold_pmids": [
+            "PMID_42526316"
+        ]
+    },
+    {
+        "id": "eval_q_2",
+        "question": "What was the effect of sinapic acid pretreatment on serum BUN, CREA, and UA levels in a rat model of LPS-induced acute kidney injury?",
+        "gold_pmids": [
+            "PMID_42585596"
+        ]
+    },
+    {
+        "id": "eval_q_3",
+        "question": "Does pressure-lowering treatment after spontaneous intracerebral haemorrhage increase the risk of serious adverse events?",
+        "gold_pmids": [
+            "PMID_42586098"
+        ]
+    },
+    {
+        "id": "eval_q_4",
+        "question": "What proportion of methamphetamine users had any sex-specific left ventricular end-diastolic diameter abnormality as detected by point-of-care ultrasound?",
+        "gold_pmids": [
+            "PMID_42550695"
+        ]
+    },
+    {
+        "id": "eval_q_5",
+        "question": "What percentage of respondents reported that the 'Lens of Emotional Connection' training module provided them with valuable knowledge about emotional connection?",
+        "gold_pmids": [
+            "PMID_42302308"
+        ]
+    },
+    {
+        "id": "eval_q_6",
+        "question": "What was the outcome of the treatment in the 69-year-old female patient with stage IV non-small cell lung carcinoma and congenital achondroplasia after four treatment cycles?",
+        "gold_pmids": [
+            "PMID_42545505"
+        ]
+    },
+    {
+        "id": "eval_q_7",
+        "question": "What is the association between high LILRB4 expression and the response to immunotherapy in ovarian cancer?",
+        "gold_pmids": [
+            "PMID_42577451"
+        ]
+    },
+    {
+        "id": "eval_q_8",
+        "question": "In young women with Hashimoto's disease, which group had the most pronounced decrease in antibody titers after receiving vitamin D supplementation?",
+        "gold_pmids": [
+            "PMID_42589370"
+        ]
+    },
+    {
+        "id": "eval_q_9",
+        "question": "What is the effect of Yiqi Yangyin Qingre decoction on proteinuria and renal function in diabetic nephropathy?",
+        "gold_pmids": [
+            "PMID_42572484"
+        ]
+    },
+    {
+        "id": "eval_q_10",
+        "question": "What was the incidence of in-hospital hypoglycemia in the external validation cohort of LADA inpatients in this study?",
+        "gold_pmids": [
+            "PMID_42577431"
+        ]
+    },
+    {
+        "id": "eval_q_11",
+        "question": "According to the text, what is the effect of adding olive oil to an already oil-restricted whole-food plant-based dietary pattern on its low-density lipoprotein cholesterol and body-weight benefits?",
+        "gold_pmids": [
+            "PMID_42588147"
+        ]
+    },
+    {
+        "id": "eval_q_12",
+        "question": "What was the prevalence of low adequacy of care observed in black men with low income according to the study?",
+        "gold_pmids": [
+            "PMID_42566455"
+        ]
+    },
+    {
+        "id": "eval_q_13",
+        "question": "What percentage of pediatric oral liquid formulations containing sorbitol as an excipient had a maximum daily sorbitol amount categorized as level 0, 1, 2, and 3, respectively?",
+        "gold_pmids": [
+            "PMID_42521898"
+        ]
+    },
+    {
+        "id": "eval_q_14",
+        "question": "What happens to cell proliferation and apoptosis in human kidney-2 cells when SNHG12 is silenced under high glucose conditions?",
+        "gold_pmids": [
+            "PMID_42579189"
+        ]
+    },
+    {
+        "id": "eval_q_15",
+        "question": "What was the range of mean inhibition zone diameters produced by the extracts in the agar well diffusion method?",
+        "gold_pmids": [
+            "PMID_42583850"
+        ]
+    },
+    {
+        "id": "eval_q_16",
+        "question": "What was the 30-day MACE rate for patients undergoing CHIP-PCI in this study?",
+        "gold_pmids": [
+            "PMID_42584428"
+        ]
+    },
+    {
+        "id": "eval_q_17",
+        "question": "What is a potential consequence of excessive use of smartphones, gaming, and digital media, particularly at night, on the physical and neurocognitive growth of children and adolescents?",
+        "gold_pmids": [
+            "PMID_42254153"
+        ]
+    },
+    {
+        "id": "eval_q_18",
+        "question": "What is the adjusted odds ratio for the association between HARM and early neurologic deterioration in patients who underwent mechanical thrombectomy for acute ischemic stroke?",
+        "gold_pmids": [
+            "PMID_42579823"
+        ]
+    },
+    {
+        "id": "eval_q_19",
+        "question": "What regimen may help identify patients with advanced BTC more likely to benefit from treatment, according to the exploratory genomic classifier based on DDR alteration and TMB-H?",
+        "gold_pmids": [
+            "PMID_42577326"
+        ]
+    },
+    {
+        "id": "eval_q_20",
+        "question": "What is required for safe anesthetic care for pediatric endoscopy and radiology procedures according to recent evidence?",
+        "gold_pmids": [
+            "PMID_42228524"
+        ]
+    },
+    {
+        "id": "eval_q_21",
+        "question": "What were the five themes identified by adults with intellectual and developmental disabilities as barriers or facilitators to primary care access in the study?",
+        "gold_pmids": [
+            "PMID_42584858"
+        ]
+    },
+    {
+        "id": "eval_q_22",
+        "question": "What is the direction of change in circulating spexin levels in patients with type 2 diabetes mellitus (T2DM) compared to non-diabetic controls?",
+        "gold_pmids": [
+            "PMID_42573161"
+        ]
+    },
+    {
+        "id": "eval_q_23",
+        "question": "What was the most common critical action omitted by learners during the simulation of managing a 13-year-old nonbinary patient with toxic shock?",
+        "gold_pmids": [
+            "PMID_42389331"
+        ]
+    },
+    {
+        "id": "eval_q_24",
+        "question": "What are the key metabolites that exert bidirectional effects on antitumor immunity through multiple mechanisms, according to recent research findings?",
+        "gold_pmids": [
+            "PMID_42558660"
+        ]
+    },
+    {
+        "id": "eval_q_25",
+        "question": "What is the primary endpoint being measured in the STOP-RIO trial to assess the effect of stopping riociguat after successful balloon pulmonary angioplasty in patients with chronic thromboembolic pulmonary hypertension?",
+        "gold_pmids": [
+            "PMID_42567637"
+        ]
+    },
+    {
+        "id": "eval_q_26",
+        "question": "How do probiotics exert anticancer effects in the context of gastric cancer?",
+        "gold_pmids": [
+            "PMID_42530270"
+        ]
+    },
+    {
+        "id": "eval_q_27",
+        "question": "What machine learning algorithm was used to improve the model's performance in predicting high hospitalization costs in patients with stroke?",
+        "gold_pmids": [
+            "PMID_42574699"
+        ]
+    },
+    {
+        "id": "eval_q_28",
+        "question": "What two cross-cutting themes were recognized throughout the data in the study on professional identity formation among participants of a longitudinal pediatric program for final-year medical students?",
+        "gold_pmids": [
+            "PMID_42391158"
+        ]
+    },
+    {
+        "id": "eval_q_29",
+        "question": "What was the only grade 3-4 treatment-related adverse event during the 9 cycles of conversion therapy in the patient with unresectable biliary tract cancer?",
+        "gold_pmids": [
+            "PMID_42519320"
+        ]
+    },
+    {
+        "id": "eval_q_30",
+        "question": "What was the outcome of using a proton pump inhibitor, specifically esomeprazole, in Chinese adolescents aged 12-17 years with gastroesophageal reflux disease (GERD) in terms of acid suppression and safety profile?",
+        "gold_pmids": [
+            "PMID_42584807"
+        ]
+    },
+    {
+        "id": "eval_q_31",
+        "question": "What was the mean score for confidence in observing the quality of the parent- or caregiver-infant relationship during well-child visits after the training module?",
+        "gold_pmids": [
+            "PMID_42302308"
+        ]
+    },
+    {
+        "id": "eval_q_32",
+        "question": "What was the mean difference in educational content scores after introducing the new andragogic holistic curriculum in the pediatric anesthesiology fellowship program?",
+        "gold_pmids": [
+            "PMID_42335453"
+        ]
+    },
+    {
+        "id": "eval_q_33",
+        "question": "How can clinical trial data be better aligned with patient-centered treatment tolerability?",
+        "gold_pmids": [
+            "PMID_42565955"
+        ]
+    },
+    {
+        "id": "eval_q_34",
+        "question": "What was the minimum inhibitory concentration (MIC) of Basin against E. faecalis?",
+        "gold_pmids": [
+            "PMID_42584737"
+        ]
+    },
+    {
+        "id": "eval_q_35",
+        "question": "What percentage of items were correctly answered by Latino seasonal farmworkers (LSW) in the study?",
+        "gold_pmids": [
+            "PMID_42576319"
+        ]
+    },
+    {
+        "id": "eval_q_36",
+        "question": "What type of inhibitors has markedly improved the prognosis of patients with mantle cell lymphoma (MCL) in recent years?",
+        "gold_pmids": [
+            "PMID_42543645"
+        ]
+    },
+    {
+        "id": "eval_q_37",
+        "question": "What is the primary focus of the study regarding the anaerobic biotransformation of BDE 99?",
+        "gold_pmids": [
+            "PMID_42511722"
+        ]
+    },
+    {
+        "id": "eval_q_38",
+        "question": "What type of nanoparticles have been identified as a potential method to target Fn-induced SPP1\u207a macrophages and potentially improve the effectiveness of chemo-immunotherapy in esophageal squamous cell carcinoma?",
+        "gold_pmids": [
+            "PMID_42559341"
+        ]
+    },
+    {
+        "id": "eval_q_39",
+        "question": "What is the time-averaged adjusted hazard ratio for developing type 2 diabetes in individuals with gestational diabetes compared to those without?",
+        "gold_pmids": [
+            "PMID_42584895"
+        ]
+    },
+    {
+        "id": "eval_q_40",
+        "question": "What is the effect of quercetin on goblet cell metaplasia in preclinical models of COPD?",
+        "gold_pmids": [
+            "PMID_42589207"
+        ]
+    },
+    {
+        "id": "eval_q_41",
+        "question": "What was the pooled mean difference in hematocrit in patients with type 2 diabetes mellitus treated with SGLT2 inhibitors compared to placebo?",
+        "gold_pmids": [
+            "PMID_42587114"
+        ]
+    },
+    {
+        "id": "eval_q_42",
+        "question": "What is the odds ratio for the causal association between depression and late-onset Alzheimer's disease?",
+        "gold_pmids": [
+            "PMID_42566636"
+        ]
+    },
+    {
+        "id": "eval_q_43",
+        "question": "What percentage of participants in the narrative medicine intervention studies were women?",
+        "gold_pmids": [
+            "PMID_42219714"
+        ]
+    },
+    {
+        "id": "eval_q_44",
+        "question": "What is the median survival time for patients with Glioblastoma?",
+        "gold_pmids": [
+            "PMID_42558850"
+        ]
+    },
+    {
+        "id": "eval_q_45",
+        "question": "What type of disorders, in addition to sepsis, may benefit from mechanism-based therapies targeting histone and non-histone modifications?",
+        "gold_pmids": [
+            "PMID_42592257"
+        ]
+    },
+    {
+        "id": "eval_q_46",
+        "question": "What percentage of participants in the study reported a self-reported positive vaccination history?",
+        "gold_pmids": [
+            "PMID_42576212"
+        ]
+    },
+    {
+        "id": "eval_q_47",
+        "question": "What was the hazard ratio for disease-free survival when comparing neoadjuvant chemoimmunotherapy to neoadjuvant chemoradiotherapy in patients with locally advanced esophageal squamous cell carcinoma?",
+        "gold_pmids": [
+            "PMID_42516383"
+        ]
+    },
+    {
+        "id": "eval_q_48",
+        "question": "At what age did 91% of pediatric gastroenterologists report that transfer of patients with Inflammatory Bowel Diseases typically occurred?",
+        "gold_pmids": [
+            "PMID_42349127"
+        ]
+    },
+    {
+        "id": "eval_q_49",
+        "question": "What was the percentage of participants who opted to receive daily push notifications in the Hopetimize intervention study?",
+        "gold_pmids": [
+            "PMID_42275191"
+        ]
+    },
+    {
+        "id": "eval_q_50",
+        "question": "What is the reported 5-year survival rate after pharyngolaryngoesophagectomy (PLE) according to recent series?",
+        "gold_pmids": [
+            "PMID_42547869"
+        ]
+    },
+    {
+        "id": "eval_q_51",
+        "question": "What specific EPA did Asian male residents have significantly flatter growth trajectories for, resulting in lower estimated scores at graduation?",
+        "gold_pmids": [
+            "PMID_42499955"
+        ]
+    },
+    {
+        "id": "eval_q_52",
+        "question": "\u00bfCu\u00e1les estrategias de comunicaci\u00f3n se consideran eficaces en urolog\u00eda pedi\u00e1trica para facilitar la expresi\u00f3n verbal de los s\u00edntomas?",
+        "gold_pmids": [
+            "PMID_42561249"
+        ]
+    },
+    {
+        "id": "eval_q_53",
+        "question": "What type of cancer is being targeted by the CAR macrophage-based immunotherapy mentioned in the text?",
+        "gold_pmids": [
+            "PMID_42521411"
+        ]
+    },
+    {
+        "id": "eval_q_54",
+        "question": "What is the potential risk associated with high-dose purified EPA supplementation, specifically icosapent ethyl at 4 g/day, in patients with cardiovascular disease?",
+        "gold_pmids": [
+            "PMID_42588160"
+        ]
+    },
+    {
+        "id": "eval_q_55",
+        "question": "What percentage of the survey participants reported having no established or formal method to address ethical concerns in their respective hospitals?",
+        "gold_pmids": [
+            "PMID_42204526"
+        ]
+    },
+    {
+        "id": "eval_q_56",
+        "question": "According to the qualitative study, what was a common barrier to HPV vaccine access reported by the middle school students?",
+        "gold_pmids": [
+            "PMID_42585391"
+        ]
+    },
+    {
+        "id": "eval_q_57",
+        "question": "What factors may further modulate seizure susceptibility after a stroke, according to emerging data?",
+        "gold_pmids": [
+            "PMID_42589478"
+        ]
+    },
+    {
+        "id": "eval_q_58",
+        "question": "What was the median score of faculty coaches' ability to distinguish between coaching and advising after participating in the coaching retreat?",
+        "gold_pmids": [
+            "PMID_42539593"
+        ]
+    },
+    {
+        "id": "eval_q_59",
+        "question": "What is the effect of short-term cell cryopreservation after electroporation on the cellular expansion of mRNA-based CAR-T products?",
+        "gold_pmids": [
+            "PMID_42533521"
+        ]
+    },
+    {
+        "id": "eval_q_60",
+        "question": "What type of cell death was induced by the combination of CBN-MLT and CBG-MLT regimens with temozolomide in glioblastoma cell lines?",
+        "gold_pmids": [
+            "PMID_42589431"
+        ]
+    },
+    {
+        "id": "eval_q_61",
+        "question": "According to the study, what is the estimated increase in the odds of disordered eating behaviors associated with every one-point increase in the fear of hypoglycemia worry subscale score in adults with type 1 diabetes?",
+        "gold_pmids": [
+            "PMID_42578745"
+        ]
+    },
+    {
+        "id": "eval_q_62",
+        "question": "Quel est le nombre de comp\u00e9tences en MPH qui ont fait l'objet d'un consensus par les membres du panel dans cette \u00e9tude?",
+        "gold_pmids": [
+            "PMID_42254943"
+        ]
+    },
+    {
+        "id": "eval_q_63",
+        "question": "What percentage of clinicians who responded to the survey were aware of the AAP guidelines for obstructive sleep apnea screening in children with Down syndrome?",
+        "gold_pmids": [
+            "PMID_42319636"
+        ]
+    },
+    {
+        "id": "eval_q_64",
+        "question": "What percentage of children were up to date with all vaccines in 2024, according to the study on routine childhood vaccination rates?",
+        "gold_pmids": [
+            "PMID_42541274"
+        ]
+    },
+    {
+        "id": "eval_q_65",
+        "question": "What percentage of patients with ischemic stroke were found to be in the sustained moderate-adherence group?",
+        "gold_pmids": [
+            "PMID_42565566"
+        ]
+    },
+    {
+        "id": "eval_q_66",
+        "question": "What percentage of patients in the study underwent mechanical thrombectomy?",
+        "gold_pmids": [
+            "PMID_42560947"
+        ]
+    },
+    {
+        "id": "eval_q_67",
+        "question": "What is one reason why commonly used biomarkers such as PD-L1 expression, TMB, and broad inflammatory gene signatures have not been sufficient to explain the variation in treatment response to immune checkpoint inhibitors in clear cell renal cell carcinoma?",
+        "gold_pmids": [
+            "PMID_42529102"
+        ]
+    },
+    {
+        "id": "eval_q_68",
+        "question": "What percentage of the S. pseudintermedius isolates from canine pyoderma were phenotypically resistant to oxacillin?",
+        "gold_pmids": [
+            "PMID_42579370"
+        ]
+    },
+    {
+        "id": "eval_q_69",
+        "question": "What proteins were associated with exercise intolerance in the HOMAGE trial, as identified by urinary proteomic profiling?",
+        "gold_pmids": [
+            "PMID_42531722"
+        ]
+    },
+    {
+        "id": "eval_q_70",
+        "question": "What was the outcome of the study in terms of improvements in motor function and activities of daily living (ADL) among patients who received VR-based task-oriented training compared to those who received conventional task-oriented training?",
+        "gold_pmids": [
+            "PMID_42581516"
+        ]
+    },
+    {
+        "id": "eval_q_71",
+        "question": "In what type of treatments did IT+RT+CT extend overall survival compared to other treatments?",
+        "gold_pmids": [
+            "PMID_42553314"
+        ]
+    },
+    {
+        "id": "eval_q_72",
+        "question": "What was the primary factor that influenced children's motivation to use the PicPecc mobile health tool for remote symptom assessment in pediatric oncology?",
+        "gold_pmids": [
+            "PMID_42391633"
+        ]
+    },
+    {
+        "id": "eval_q_73",
+        "question": "What percentage improvement in ciprofloxacin penetration was observed with the nanoparticulate formulation compared to pure ciprofloxacin?",
+        "gold_pmids": [
+            "PMID_42541633"
+        ]
+    },
+    {
+        "id": "eval_q_74",
+        "question": "What types of innovative strategies have emerged to address the burden of heart failure on healthcare systems, as discussed at the 2026 ESC Heart Failure Congress in Barcelona, Spain?",
+        "gold_pmids": [
+            "PMID_42550328"
+        ]
+    },
+    {
+        "id": "eval_q_75",
+        "question": "What role may ddPCR play in the risk stratification of early blood stream infection?",
+        "gold_pmids": [
+            "PMID_42591506"
+        ]
+    },
+    {
+        "id": "eval_q_76",
+        "question": "What was the effect of empagliflozin on left carotid intima-media thickness in patients with type 2 diabetes and recent ST-elevation myocardial infarction after 3 months of treatment?",
+        "gold_pmids": [
+            "PMID_42571075"
+        ]
+    },
+    {
+        "id": "eval_q_77",
+        "question": "What is the source of the natural product shilajit resin used for the extraction of diverse components in the synthesis of gold nanoparticles and selenium nanoparticles?",
+        "gold_pmids": [
+            "PMID_42588498"
+        ]
+    },
+    {
+        "id": "eval_q_78",
+        "question": "What was the median decrease in systolic blood pressure (SBP) among the participants in the study?",
+        "gold_pmids": [
+            "PMID_42533611"
+        ]
+    },
+    {
+        "id": "eval_q_79",
+        "question": "What was the range of specificity for algorithms that included bacteremia and pathogen-specific codes in identifying bacteremia in adult patients?",
+        "gold_pmids": [
+            "PMID_42592811"
+        ]
+    },
+    {
+        "id": "eval_q_80",
+        "question": "What is the association between a 1-unit increase in atherogenic index of plasma (AIP) and the odds of prevalent type 2 diabetes mellitus (T2DM) in patients with premature coronary artery disease (PCAD)?",
+        "gold_pmids": [
+            "PMID_42583814"
+        ]
+    },
+    {
+        "id": "eval_q_81",
+        "question": "According to the text, what is the primary factor driving the selection of excipients in pediatric extemporaneous antihypertensive liquid formulations?",
+        "gold_pmids": [
+            "PMID_42320763"
+        ]
+    },
+    {
+        "id": "eval_q_82",
+        "question": "What common combination of strategies is used by successful national vaccination programs to improve vaccine delivery and coverage?",
+        "gold_pmids": [
+            "PMID_42518306"
+        ]
+    },
+    {
+        "id": "eval_q_83",
+        "question": "What type of cancer was involved in the studies that evaluated the association between dietary fiber intake and the effectiveness of immunotherapy?",
+        "gold_pmids": [
+            "PMID_42533258"
+        ]
+    },
+    {
+        "id": "eval_q_84",
+        "question": "In early-stage AD rats, what was the increase in CA oxidative phosphorylation capacity for complex I after treatment with ExPlas compared to saline?",
+        "gold_pmids": [
+            "PMID_42573418"
+        ]
+    },
+    {
+        "id": "eval_q_85",
+        "question": "What non-pharmacological methods are supported by clinical experience as contributing to the reduction of children's anxiety in pediatric care?",
+        "gold_pmids": [
+            "PMID_42543014"
+        ]
+    },
+    {
+        "id": "eval_q_86",
+        "question": "What factors influenced the healthcare professionals' ability to interact with pediatric patients at the adult ICU, according to the study?",
+        "gold_pmids": [
+            "PMID_42314324"
+        ]
+    },
+    {
+        "id": "eval_q_87",
+        "question": "What are some of the challenges that limit the ability to leverage big data in pediatric oncology?",
+        "gold_pmids": [
+            "PMID_42270202"
+        ]
+    },
+    {
+        "id": "eval_q_88",
+        "question": "What effect does intrathecal injection of maresin 1 have on nerve injury-induced chronic pain in mice fed a high-fat diet?",
+        "gold_pmids": [
+            "PMID_42590880"
+        ]
+    },
+    {
+        "id": "eval_q_89",
+        "question": "What percentage of patients with H pylori infections in the study experienced abdominal pain as a clinical presentation?",
+        "gold_pmids": [
+            "PMID_42586603"
+        ]
+    },
+    {
+        "id": "eval_q_90",
+        "question": "What are the potential contributors to the progression of vascular cognitive impairment (VCI) according to emerging evidence?",
+        "gold_pmids": [
+            "PMID_42589472"
+        ]
+    },
+    {
+        "id": "eval_q_91",
+        "question": "What type of personnel are needed for the successful conduct of pediatric hospital medicine randomized controlled trial studies?",
+        "gold_pmids": [
+            "PMID_42386199"
+        ]
+    },
+    {
+        "id": "eval_q_92",
+        "question": "What registry is mentioned in the text as the location where the research has been registered?",
+        "gold_pmids": [
+            "PMID_42495734"
+        ]
+    },
+    {
+        "id": "eval_q_93",
+        "question": "What treatment was initiated for the patient with HHV-6 reactivation, in addition to antiviral therapy with foscarnet and later ganciclovir?",
+        "gold_pmids": [
+            "PMID_42575512"
+        ]
+    },
+    {
+        "id": "eval_q_94",
+        "question": "What is the primary goal of identifying at-risk individuals for Alzheimer's disease through the combination of neurophysiological, imaging, and blood biomarkers?",
+        "gold_pmids": [
+            "PMID_42585316"
+        ]
+    },
+    {
+        "id": "eval_q_95",
+        "question": "At what stage of Alzheimer's disease would earlier intervention in metabolically enriched groups potentially have the most impact on altering cognitive, vascular, and biomarker trajectories?",
+        "gold_pmids": [
+            "PMID_42580680"
+        ]
+    },
+    {
+        "id": "eval_q_96",
+        "question": "Which retinal cell types demonstrated the most significant ferroptosis-score-related differences in the DR group compared to the normal control groups?",
+        "gold_pmids": [
+            "PMID_42568025"
+        ]
+    },
+    {
+        "id": "eval_q_97",
+        "question": "What is the primary reason why pediatricians and pediatric subspecialists receive lower rates of compensation compared to their adult patient care counterparts, according to the provided text?",
+        "gold_pmids": [
+            "PMID_42349985"
+        ]
+    },
+    {
+        "id": "eval_q_98",
+        "question": "What are some emerging therapeutic strategies being explored to target cancer-associated fibroblasts and improve the effectiveness of immunotherapy?",
+        "gold_pmids": [
+            "PMID_42517964"
+        ]
+    },
+    {
+        "id": "eval_q_99",
+        "question": "In patients with left anterior descending (LAD) stenosis and a negative stress test, what is the relationship between coronary artery calcium (CAC) score and left ventricular global longitudinal strain (LV GLS)?",
+        "gold_pmids": [
+            "PMID_42593004"
+        ]
+    },
+    {
+        "id": "eval_q_100",
+        "question": "What percentage of P. mirabilis isolates were found to be resistant to at least one third- or fourth-generation cephalosporin?",
+        "gold_pmids": [
+            "PMID_42579695"
+        ]
+    }
 ]
