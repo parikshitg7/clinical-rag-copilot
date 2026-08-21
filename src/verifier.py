@@ -6,17 +6,18 @@ from src.schema import Claim, VerificationResult, Label
 
 load_dotenv()
 
-# Initialize the OpenAI client and wrap it with Instructor
+# Initialize OpenAI client pointed to Groq with instructor JSON mode
 client = instructor.from_openai(
     OpenAI(
-        api_key=os.getenv("OPENAI_API_KEY", "dummy-key-for-tests"),
-        base_url=os.getenv("OPENAI_BASE_URL")
-    )
+        api_key=os.getenv("OPENAI_API_KEY") or os.getenv("GROQ_API_KEY", "dummy-key-for-tests"),
+        base_url=os.getenv("OPENAI_BASE_URL", "https://api.groq.com/openai/v1")
+    ),
+    mode=instructor.Mode.JSON
 )
 
 def verify_claim(claim: Claim, source_chunk_text: str) -> Label:
     """
-    Judges whether a single claim is supported by the provided source chunk.
+    Judges whether a single claim is supported by the provided source chunk using gpt-oss-120b.
     """
     prompt = f"""
     You are a strict clinical entailment verifier. 
@@ -36,13 +37,14 @@ def verify_claim(claim: Claim, source_chunk_text: str) -> Label:
     """
 
     result = client.chat.completions.create(
-        model="openai/gpt-oss-120b",  # <-- Updated Model
+        model="openai/gpt-oss-120b",
         response_model=VerificationResult,
         messages=[
             {"role": "system", "content": "You are a highly strict clinical verification system."},
             {"role": "user", "content": prompt}
         ],
-        temperature=0.0
+        temperature=0.0,
+        max_tokens=1024
     )
     
     return result.label

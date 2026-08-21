@@ -32,6 +32,7 @@ def evaluate_answer_claims(answer: ClinicalAnswer, chunks: List[Chunk]) -> tuple
             continue
             
         try:
+            time.sleep(2)
             label = verify_claim(claim, chunk_text)
             if is_hallucination(label):
                 unsupported_count += 1
@@ -57,8 +58,8 @@ def save_checkpoint(data: dict):
         json.dump(data, f, indent=4)
 
 def run_e2e_evaluation():
-    logger.info("Starting End-to-End System Evaluation with Checkpointing (Phase 8.4)...")
-    questions = load_eval_questions()  # Full 100 questions
+    logger.info("Starting End-to-End System Evaluation (Phase 8.4) with gpt-oss-120b...")
+    questions = load_eval_questions()
     
     checkpoint_data = load_checkpoint()
     evaluated_ids = {item["id"] for item in checkpoint_data["evaluations"]}
@@ -92,11 +93,13 @@ def run_e2e_evaluation():
                 
             # 2. Condition A: Baseline RAG
             logger.info("  -> Running Condition A: Baseline Generator")
+            time.sleep(2)
             baseline_answer = generate_clinical_answer(q.question, chunks)
             b_total, b_unsup = evaluate_answer_claims(baseline_answer, chunks)
             
             # 3. Condition B: Verified LangGraph RAG
             logger.info("  -> Running Condition B: LangGraph Agent")
+            time.sleep(3)
             graph_state = clinical_graph.invoke({
                 "question": q.question, 
                 "chunks": chunks, 
@@ -116,13 +119,12 @@ def run_e2e_evaluation():
             checkpoint_data["evaluations"].append(q_result)
             save_checkpoint(checkpoint_data)
             
-            # Rate limit protection delay (6 second pause between queries)
-            logger.info("  -> Pausing 5 seconds for smart rate-limit pacing...")
-            time.sleep(6)
+            logger.info("  -> Pausing 6s between questions for rate-limit protection...")
+            time.sleep(10)
 
         except Exception as e:
             logger.error(f"Execution stopped on Q{idx} ({q.id}) due to error or rate limit: {e}")
-            logger.info("Progress saved! You can run this script again later to resume right where you left off.")
+            logger.info("Progress saved! You can run this script again to resume.")
             break
 
     # Calculate metrics over all currently completed questions

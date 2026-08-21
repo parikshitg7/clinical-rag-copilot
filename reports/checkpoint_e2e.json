@@ -275,6 +275,54 @@
                 "total_claims": 0,
                 "unsupported": 0
             }
+        },
+        {
+            "id": "eval_q_24",
+            "question": "What are the key metabolites that exert bidirectional effects on antitumor immunity through multiple mechanisms, according to recent research findings?",
+            "baseline": {
+                "total_claims": 3,
+                "unsupported": 3
+            },
+            "langgraph": {
+                "total_claims": 1,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_25",
+            "question": "What is the primary endpoint being measured in the STOP-RIO trial to assess the effect of stopping riociguat after successful balloon pulmonary angioplasty in patients with chronic thromboembolic pulmonary hypertension?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 1
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_26",
+            "question": "How do probiotics exert anticancer effects in the context of gastric cancer?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 1
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_27",
+            "question": "What machine learning algorithm was used to improve the model's performance in predicting high hospitalization costs in patients with stroke?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 1
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
         }
     ]
 }

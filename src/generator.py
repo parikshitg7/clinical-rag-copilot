@@ -8,7 +8,7 @@ from src.schema import Chunk, ClinicalAnswer
 
 load_dotenv()
 
-# Initialize OpenAI client pointed to Groq with instructor
+# Initialize OpenAI client pointed to Groq with instructor JSON mode
 client = instructor.from_openai(
     OpenAI(
         api_key=os.getenv("OPENAI_API_KEY") or os.getenv("GROQ_API_KEY", "dummy-key-for-tests"),
@@ -30,7 +30,7 @@ Rules:
 
 def generate_clinical_answer(question: str, chunks: List[Chunk]) -> ClinicalAnswer:
     """
-    Sends the question and retrieved chunks to the LLM and returns a structured ClinicalAnswer.
+    Sends the question and retrieved chunks to gpt-oss-120b and returns a structured ClinicalAnswer.
     """
     context_text = "\n\n".join(
         [f"[Chunk ID: {c.chunk_index} | Source: {c.parent_doc_id}]\n{c.text}" for c in chunks]
@@ -46,6 +46,7 @@ def generate_clinical_answer(question: str, chunks: List[Chunk]) -> ClinicalAnsw
         ],
         response_model=ClinicalAnswer,
         temperature=0.0,
+        max_tokens=2048
     )
 
     return answer
