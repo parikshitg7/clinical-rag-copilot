@@ -59,8 +59,8 @@ def run_retrieval_evaluation(initial_k: int = 15, eval_k: int = 5, output_file: 
         reranked_ids = [chunk["parent_doc_id"] for chunk in reranked_chunks]
 
         # 3. Compute metrics strictly on top 'eval_k' (e.g., Top 5)
-        base_metrics = compute_metrics(q.gold_source_ids, baseline_ids, eval_k)
-        rerank_metrics = compute_metrics(q.gold_source_ids, reranked_ids, eval_k)
+        base_metrics = compute_metrics(q.gold_pmids, baseline_ids, eval_k)
+        rerank_metrics = compute_metrics(q.gold_pmids, reranked_ids, eval_k)
 
         for key in baseline_totals:
             baseline_totals[key] += base_metrics[key]

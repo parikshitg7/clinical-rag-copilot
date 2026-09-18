@@ -119,8 +119,8 @@ def run_e2e_evaluation():
             checkpoint_data["evaluations"].append(q_result)
             save_checkpoint(checkpoint_data)
             
-            logger.info("  -> Pausing 6s between questions for rate-limit protection...")
-            time.sleep(10)
+            logger.info("  -> Pausing 15 between questions for rate-limit protection...")
+            time.sleep(15)
 
         except Exception as e:
             logger.error(f"Execution stopped on Q{idx} ({q.id}) due to error or rate limit: {e}")

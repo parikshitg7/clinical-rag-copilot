@@ -323,6 +323,882 @@
                 "total_claims": 0,
                 "unsupported": 0
             }
+        },
+        {
+            "id": "eval_q_28",
+            "question": "What two cross-cutting themes were recognized throughout the data in the study on professional identity formation among participants of a longitudinal pediatric program for final-year medical students?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 1
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_29",
+            "question": "What was the only grade 3-4 treatment-related adverse event during the 9 cycles of conversion therapy in the patient with unresectable biliary tract cancer?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 1
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_30",
+            "question": "What was the outcome of using a proton pump inhibitor, specifically esomeprazole, in Chinese adolescents aged 12-17 years with gastroesophageal reflux disease (GERD) in terms of acid suppression and safety profile?",
+            "baseline": {
+                "total_claims": 3,
+                "unsupported": 3
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_31",
+            "question": "What was the mean score for confidence in observing the quality of the parent- or caregiver-infant relationship during well-child visits after the training module?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 1
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_32",
+            "question": "What was the mean difference in educational content scores after introducing the new andragogic holistic curriculum in the pediatric anesthesiology fellowship program?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 0
+            },
+            "langgraph": {
+                "total_claims": 1,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_33",
+            "question": "How can clinical trial data be better aligned with patient-centered treatment tolerability?",
+            "baseline": {
+                "total_claims": 6,
+                "unsupported": 5
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_34",
+            "question": "What was the minimum inhibitory concentration (MIC) of Basin against E. faecalis?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 1
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_35",
+            "question": "What percentage of items were correctly answered by Latino seasonal farmworkers (LSW) in the study?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 0
+            },
+            "langgraph": {
+                "total_claims": 1,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_36",
+            "question": "What type of inhibitors has markedly improved the prognosis of patients with mantle cell lymphoma (MCL) in recent years?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 1
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_37",
+            "question": "What is the primary focus of the study regarding the anaerobic biotransformation of BDE 99?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 0
+            },
+            "langgraph": {
+                "total_claims": 1,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_38",
+            "question": "What type of nanoparticles have been identified as a potential method to target Fn-induced SPP1\u207a macrophages and potentially improve the effectiveness of chemo-immunotherapy in esophageal squamous cell carcinoma?",
+            "baseline": {
+                "total_claims": 0,
+                "unsupported": 0
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_39",
+            "question": "What is the time-averaged adjusted hazard ratio for developing type 2 diabetes in individuals with gestational diabetes compared to those without?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 1
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_40",
+            "question": "What is the effect of quercetin on goblet cell metaplasia in preclinical models of COPD?",
+            "baseline": {
+                "total_claims": 2,
+                "unsupported": 2
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_41",
+            "question": "What was the pooled mean difference in hematocrit in patients with type 2 diabetes mellitus treated with SGLT2 inhibitors compared to placebo?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 1
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_42",
+            "question": "What is the odds ratio for the causal association between depression and late-onset Alzheimer's disease?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 1
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_43",
+            "question": "What percentage of participants in the narrative medicine intervention studies were women?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 1
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_44",
+            "question": "What is the median survival time for patients with Glioblastoma?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 1
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_45",
+            "question": "What type of disorders, in addition to sepsis, may benefit from mechanism-based therapies targeting histone and non-histone modifications?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 1
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_46",
+            "question": "What percentage of participants in the study reported a self-reported positive vaccination history?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 1
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_47",
+            "question": "What was the hazard ratio for disease-free survival when comparing neoadjuvant chemoimmunotherapy to neoadjuvant chemoradiotherapy in patients with locally advanced esophageal squamous cell carcinoma?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 1
+            },
+            "langgraph": {
+                "total_claims": 1,
+                "unsupported": 1
+            }
+        },
+        {
+            "id": "eval_q_48",
+            "question": "At what age did 91% of pediatric gastroenterologists report that transfer of patients with Inflammatory Bowel Diseases typically occurred?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 1
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_49",
+            "question": "What was the percentage of participants who opted to receive daily push notifications in the Hopetimize intervention study?",
+            "baseline": {
+                "total_claims": 0,
+                "unsupported": 0
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_50",
+            "question": "What is the reported 5-year survival rate after pharyngolaryngoesophagectomy (PLE) according to recent series?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 1
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_51",
+            "question": "What specific EPA did Asian male residents have significantly flatter growth trajectories for, resulting in lower estimated scores at graduation?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 1
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_52",
+            "question": "\u00bfCu\u00e1les estrategias de comunicaci\u00f3n se consideran eficaces en urolog\u00eda pedi\u00e1trica para facilitar la expresi\u00f3n verbal de los s\u00edntomas?",
+            "baseline": {
+                "total_claims": 5,
+                "unsupported": 5
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_53",
+            "question": "What type of cancer is being targeted by the CAR macrophage-based immunotherapy mentioned in the text?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 1
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_54",
+            "question": "What is the potential risk associated with high-dose purified EPA supplementation, specifically icosapent ethyl at 4 g/day, in patients with cardiovascular disease?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 1
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_55",
+            "question": "What percentage of the survey participants reported having no established or formal method to address ethical concerns in their respective hospitals?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 0
+            },
+            "langgraph": {
+                "total_claims": 1,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_56",
+            "question": "According to the qualitative study, what was a common barrier to HPV vaccine access reported by the middle school students?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 1
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_57",
+            "question": "What factors may further modulate seizure susceptibility after a stroke, according to emerging data?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 1
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_58",
+            "question": "What was the median score of faculty coaches' ability to distinguish between coaching and advising after participating in the coaching retreat?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 0
+            },
+            "langgraph": {
+                "total_claims": 1,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_59",
+            "question": "What is the effect of short-term cell cryopreservation after electroporation on the cellular expansion of mRNA-based CAR-T products?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 1
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_60",
+            "question": "What type of cell death was induced by the combination of CBN-MLT and CBG-MLT regimens with temozolomide in glioblastoma cell lines?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 0
+            },
+            "langgraph": {
+                "total_claims": 1,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_61",
+            "question": "According to the study, what is the estimated increase in the odds of disordered eating behaviors associated with every one-point increase in the fear of hypoglycemia worry subscale score in adults with type 1 diabetes?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 1
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_62",
+            "question": "Quel est le nombre de comp\u00e9tences en MPH qui ont fait l'objet d'un consensus par les membres du panel dans cette \u00e9tude?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 0
+            },
+            "langgraph": {
+                "total_claims": 1,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_63",
+            "question": "What percentage of clinicians who responded to the survey were aware of the AAP guidelines for obstructive sleep apnea screening in children with Down syndrome?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 1
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_64",
+            "question": "What percentage of children were up to date with all vaccines in 2024, according to the study on routine childhood vaccination rates?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 1
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_65",
+            "question": "What percentage of patients with ischemic stroke were found to be in the sustained moderate-adherence group?",
+            "baseline": {
+                "total_claims": 0,
+                "unsupported": 0
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_66",
+            "question": "What percentage of patients in the study underwent mechanical thrombectomy?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 0
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_67",
+            "question": "What is one reason why commonly used biomarkers such as PD-L1 expression, TMB, and broad inflammatory gene signatures have not been sufficient to explain the variation in treatment response to immune checkpoint inhibitors in clear cell renal cell carcinoma?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 1
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_68",
+            "question": "What percentage of the S. pseudintermedius isolates from canine pyoderma were phenotypically resistant to oxacillin?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 1
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_69",
+            "question": "What proteins were associated with exercise intolerance in the HOMAGE trial, as identified by urinary proteomic profiling?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 1
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_70",
+            "question": "What was the outcome of the study in terms of improvements in motor function and activities of daily living (ADL) among patients who received VR-based task-oriented training compared to those who received conventional task-oriented training?",
+            "baseline": {
+                "total_claims": 5,
+                "unsupported": 5
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_71",
+            "question": "In what type of treatments did IT+RT+CT extend overall survival compared to other treatments?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 1
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_72",
+            "question": "What was the primary factor that influenced children's motivation to use the PicPecc mobile health tool for remote symptom assessment in pediatric oncology?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 0
+            },
+            "langgraph": {
+                "total_claims": 1,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_73",
+            "question": "What percentage improvement in ciprofloxacin penetration was observed with the nanoparticulate formulation compared to pure ciprofloxacin?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 0
+            },
+            "langgraph": {
+                "total_claims": 1,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_74",
+            "question": "What types of innovative strategies have emerged to address the burden of heart failure on healthcare systems, as discussed at the 2026 ESC Heart Failure Congress in Barcelona, Spain?",
+            "baseline": {
+                "total_claims": 4,
+                "unsupported": 4
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_75",
+            "question": "What role may ddPCR play in the risk stratification of early blood stream infection?",
+            "baseline": {
+                "total_claims": 2,
+                "unsupported": 2
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_76",
+            "question": "What was the effect of empagliflozin on left carotid intima-media thickness in patients with type 2 diabetes and recent ST-elevation myocardial infarction after 3 months of treatment?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 1
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_77",
+            "question": "What is the source of the natural product shilajit resin used for the extraction of diverse components in the synthesis of gold nanoparticles and selenium nanoparticles?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 1
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_78",
+            "question": "What was the median decrease in systolic blood pressure (SBP) among the participants in the study?",
+            "baseline": {
+                "total_claims": 0,
+                "unsupported": 0
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_79",
+            "question": "What was the range of specificity for algorithms that included bacteremia and pathogen-specific codes in identifying bacteremia in adult patients?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 1
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_80",
+            "question": "What is the association between a 1-unit increase in atherogenic index of plasma (AIP) and the odds of prevalent type 2 diabetes mellitus (T2DM) in patients with premature coronary artery disease (PCAD)?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 0
+            },
+            "langgraph": {
+                "total_claims": 1,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_81",
+            "question": "According to the text, what is the primary factor driving the selection of excipients in pediatric extemporaneous antihypertensive liquid formulations?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 1
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_82",
+            "question": "What common combination of strategies is used by successful national vaccination programs to improve vaccine delivery and coverage?",
+            "baseline": {
+                "total_claims": 3,
+                "unsupported": 3
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_83",
+            "question": "What type of cancer was involved in the studies that evaluated the association between dietary fiber intake and the effectiveness of immunotherapy?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 1
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_84",
+            "question": "In early-stage AD rats, what was the increase in CA oxidative phosphorylation capacity for complex I after treatment with ExPlas compared to saline?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 0
+            },
+            "langgraph": {
+                "total_claims": 1,
+                "unsupported": 1
+            }
+        },
+        {
+            "id": "eval_q_85",
+            "question": "What non-pharmacological methods are supported by clinical experience as contributing to the reduction of children's anxiety in pediatric care?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 1
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_86",
+            "question": "What factors influenced the healthcare professionals' ability to interact with pediatric patients at the adult ICU, according to the study?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 1
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_87",
+            "question": "What are some of the challenges that limit the ability to leverage big data in pediatric oncology?",
+            "baseline": {
+                "total_claims": 0,
+                "unsupported": 0
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_88",
+            "question": "What effect does intrathecal injection of maresin 1 have on nerve injury-induced chronic pain in mice fed a high-fat diet?",
+            "baseline": {
+                "total_claims": 2,
+                "unsupported": 2
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_89",
+            "question": "What percentage of patients with H pylori infections in the study experienced abdominal pain as a clinical presentation?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 1
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_90",
+            "question": "What are the potential contributors to the progression of vascular cognitive impairment (VCI) according to emerging evidence?",
+            "baseline": {
+                "total_claims": 3,
+                "unsupported": 3
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_91",
+            "question": "What type of personnel are needed for the successful conduct of pediatric hospital medicine randomized controlled trial studies?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 1
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_92",
+            "question": "What registry is mentioned in the text as the location where the research has been registered?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 1
+            },
+            "langgraph": {
+                "total_claims": 1,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_93",
+            "question": "What treatment was initiated for the patient with HHV-6 reactivation, in addition to antiviral therapy with foscarnet and later ganciclovir?",
+            "baseline": {
+                "total_claims": 2,
+                "unsupported": 0
+            },
+            "langgraph": {
+                "total_claims": 2,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_94",
+            "question": "What is the primary goal of identifying at-risk individuals for Alzheimer's disease through the combination of neurophysiological, imaging, and blood biomarkers?",
+            "baseline": {
+                "total_claims": 2,
+                "unsupported": 2
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_95",
+            "question": "At what stage of Alzheimer's disease would earlier intervention in metabolically enriched groups potentially have the most impact on altering cognitive, vascular, and biomarker trajectories?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 0
+            },
+            "langgraph": {
+                "total_claims": 1,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_96",
+            "question": "Which retinal cell types demonstrated the most significant ferroptosis-score-related differences in the DR group compared to the normal control groups?",
+            "baseline": {
+                "total_claims": 0,
+                "unsupported": 0
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_97",
+            "question": "What is the primary reason why pediatricians and pediatric subspecialists receive lower rates of compensation compared to their adult patient care counterparts, according to the provided text?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 1
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_98",
+            "question": "What are some emerging therapeutic strategies being explored to target cancer-associated fibroblasts and improve the effectiveness of immunotherapy?",
+            "baseline": {
+                "total_claims": 2,
+                "unsupported": 2
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_99",
+            "question": "In patients with left anterior descending (LAD) stenosis and a negative stress test, what is the relationship between coronary artery calcium (CAC) score and left ventricular global longitudinal strain (LV GLS)?",
+            "baseline": {
+                "total_claims": 2,
+                "unsupported": 2
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
+        },
+        {
+            "id": "eval_q_100",
+            "question": "What percentage of P. mirabilis isolates were found to be resistant to at least one third- or fourth-generation cephalosporin?",
+            "baseline": {
+                "total_claims": 1,
+                "unsupported": 1
+            },
+            "langgraph": {
+                "total_claims": 0,
+                "unsupported": 0
+            }
         }
     ]
 }

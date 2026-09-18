@@ -1,4 +1,3 @@
-# src/api.py
 from fastapi import FastAPI, HTTPException, Query
 from pydantic import BaseModel
 from typing import List
@@ -6,7 +5,7 @@ from typing import List
 # Import the LangGraph state machine
 from src.graph import clinical_graph
 
-# Import the exact function names from your embedding service
+# Import function names from your embedding service and repository
 from src.embedding_service import generate_query_embedding, rerank_chunks
 from src.repository import search_similar_chunks
 
@@ -19,13 +18,23 @@ app = FastAPI(
     version="1.0.0"
 )
 
-# Define the structured output for our search endpoint
+# Helper function to construct PubMed URL
+def build_pubmed_url(parent_doc_id: str) -> str:
+    pmid = str(parent_doc_id).replace("PMID_", "").strip()
+    return f"https://pubmed.ncbi.nlm.nih.gov/{pmid}/"
+
+# Updated SearchResult schema with url field
 class SearchResult(BaseModel):
     id: int
     parent_doc_id: str
     section: str
     text: str
     score: float
+    url: str  # Direct clickable link to PubMed
+
+@app.get("/")
+def read_root():
+    return {"status": "online", "message": "API is running. Go to /docs for Swagger UI."}
 
 @app.get("/search", response_model=List[SearchResult])
 def search_clinical_literature(
@@ -47,13 +56,15 @@ def search_clinical_literature(
         
         results = []
         for chunk in ranked_chunks:
+            doc_id = chunk['parent_doc_id']
             results.append(
                 SearchResult(
                     id=chunk['id'],
-                    parent_doc_id=chunk['parent_doc_id'],
+                    parent_doc_id=doc_id,
                     section=chunk['section'],
                     text=chunk['text'],
-                    score=chunk['rerank_score']
+                    score=chunk['rerank_score'],
+                    url=build_pubmed_url(doc_id)
                 )
             )
         return results
@@ -86,21 +97,19 @@ def ask_clinical_question(
             
         ranked_chunks = rerank_chunks(q, retrieved_chunks, top_n=top_n)
         
-        # 2. Convert raw DB dicts into Chunk objects for the Graph
+        # 2. Convert raw DB dicts into Chunk objects for the Graph (using 0-based index)
         chunk_objects = []
-        for c in ranked_chunks:
-            chunk_index = c.get('chunk_index', c['id']) 
+        for idx, c in enumerate(ranked_chunks):
             chunk_objects.append(
                 Chunk(
                     parent_doc_id=c['parent_doc_id'],
                     section=c['section'],
-                    chunk_index=chunk_index,
+                    chunk_index=idx,
                     text=c['text']
                 )
             )
 
         # 3. Hand off to the LangGraph Orchestrator
-        # This completely replaces the manual loop!
         initial_state = {
             "question": q,
             "chunks": chunk_objects,

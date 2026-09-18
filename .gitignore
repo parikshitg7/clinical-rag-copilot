@@ -14,3 +14,20 @@ __pycache__/
 
 # Raw Data
 data/
+
+# Example entries in .gitignore
+models/
+*.pt
+*.bin
+*.safetensors
+*.json
+.venv/
+
+# Ignore data & databases
+data/*.csv
+*.db
+*.index
+models/
+venv/
+*.zip
+*.safetensors
