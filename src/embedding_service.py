@@ -1,71 +1,68 @@
 import os
-import requests
+import json
 from typing import List
 from dotenv import load_dotenv
+from huggingface_hub import InferenceClient
 
 load_dotenv()
 
 HF_TOKEN = os.getenv("HF_TOKEN")
-HEADERS = {"Authorization": f"Bearer {HF_TOKEN}"} if HF_TOKEN else {}
 
-ARTICLE_MODEL_URL = "https://api-inference.huggingface.co/models/ncbi/MedCPT-Article-Encoder"
-QUERY_MODEL_URL = "https://api-inference.huggingface.co/models/ncbi/MedCPT-Query-Encoder"
+# Initialize Hugging Face InferenceClient
+client = InferenceClient(token=HF_TOKEN)
 
-# Pointing to your fine-tuned reranker on Hugging Face Hub
-RERANKER_MODEL_URL = "https://api-inference.huggingface.co/models/parikshitup7/finetuned-medcpt-reranker"
+ARTICLE_MODEL = "ncbi/MedCPT-Article-Encoder"
+QUERY_MODEL = "ncbi/MedCPT-Query-Encoder"
+RERANKER_MODEL = "parikshitup7/finetuned-medcpt-reranker"
 
-def _get_hf_embedding(url: str, text: str) -> List[float]:
-    payload = {"inputs": text, "options": {"wait_for_model": True}}
-    response = requests.post(url, headers=HEADERS, json=payload, timeout=30)
-    response.raise_for_status()
-    res = response.json()
-    if isinstance(res, list) and len(res) > 0 and isinstance(res[0], list):
-        return res[0]
-    return res
 
 def generate_embedding(text: str) -> List[float]:
-    """Converts a chunk of text into a vector via HF Inference API."""
-    return _get_hf_embedding(ARTICLE_MODEL_URL, text)
+    """Converts a chunk of text into a vector using HF InferenceClient."""
+    response = client.feature_extraction(text, model=ARTICLE_MODEL)
+    
+    if hasattr(response, "tolist"):
+        return response.tolist()
+    if isinstance(response, list) and len(response) > 0 and isinstance(response[0], list):
+        return response[0]
+    return list(response)
+
 
 def generate_query_embedding(query: str) -> List[float]:
-    """Converts a user's question into a vector via HF Inference API."""
-    return _get_hf_embedding(QUERY_MODEL_URL, query)
+    """Converts a user query into a vector using HF InferenceClient."""
+    response = client.feature_extraction(query, model=QUERY_MODEL)
+    
+    if hasattr(response, "tolist"):
+        return response.tolist()
+    if isinstance(response, list) and len(response) > 0 and isinstance(response[0], list):
+        return response[0]
+    return list(response)
+
 
 def rerank_chunks(query: str, chunks: List[dict], top_n: int = 3) -> List[dict]:
-    """Scores chunks using your fine-tuned Cross-Encoder API and returns top_n ordered by score."""
+    """Scores chunks using the Cross-Encoder model via HF InferenceClient."""
     if not chunks:
         return []
 
-    pairs = [{"text": query, "text_pair": chunk["text"]} for chunk in chunks]
-    
+    payload = {
+        "inputs": {
+            "source_sentence": query,
+            "sentences": [c.get("text", "") for c in chunks]
+        }
+    }
+
     try:
-        response = requests.post(
-            RERANKER_MODEL_URL,
-            headers=HEADERS,
-            json={"inputs": pairs, "options": {"wait_for_model": True}},
-            timeout=30
-        )
-        response.raise_for_status()
-        scores_data = response.json()
-        
+        response = client.post(json=payload, model=RERANKER_MODEL)
+        scores = json.loads(response.decode("utf-8")) if isinstance(response, bytes) else response
+
+        scored_chunks = []
         for i, chunk in enumerate(chunks):
-            if isinstance(scores_data, list) and i < len(scores_data):
-                item = scores_data[i]
-                if isinstance(item, list) and len(item) > 0 and "score" in item[0]:
-                    chunk["rerank_score"] = float(item[0]["score"])
-                elif isinstance(item, dict) and "score" in item:
-                    chunk["rerank_score"] = float(item["score"])
-                elif isinstance(item, (int, float)):
-                    chunk["rerank_score"] = float(item)
-                else:
-                    chunk["rerank_score"] = 0.0
-            else:
-                chunk["rerank_score"] = 0.0
+            score = scores[i] if isinstance(scores, list) and i < len(scores) else 0.0
+            chunk_copy = chunk.copy()
+            chunk_copy["rerank_score"] = score
+            scored_chunks.append(chunk_copy)
 
+        scored_chunks.sort(key=lambda x: x.get("rerank_score", 0), reverse=True)
+        return scored_chunks[:top_n]
     except Exception as e:
-        print(f"Reranking API note: {e}. Preserving default vector ordering.")
-        for chunk in chunks:
-            chunk.setdefault("rerank_score", 0.0)
-
-    reranked_chunks = sorted(chunks, key=lambda x: x.get("rerank_score", 0.0), reverse=True)
-    return reranked_chunks[:top_n]
+        print(f"Reranking fallback triggered: {e}")
+        return chunks[:top_n]
