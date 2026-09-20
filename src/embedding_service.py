@@ -8,8 +8,8 @@ load_dotenv()
 HF_TOKEN = os.getenv("HF_TOKEN")
 HEADERS = {"Authorization": f"Bearer {HF_TOKEN}"} if HF_TOKEN else {}
 
-ARTICLE_MODEL_URL = "https://api-inference.huggingface.co/pipeline/feature-extraction/ncbi/MedCPT-Article-Encoder"
-QUERY_MODEL_URL = "https://api-inference.huggingface.co/pipeline/feature-extraction/ncbi/MedCPT-Query-Encoder"
+ARTICLE_MODEL_URL = "https://api-inference.huggingface.co/models/ncbi/MedCPT-Article-Encoder"
+QUERY_MODEL_URL = "https://api-inference.huggingface.co/models/ncbi/MedCPT-Query-Encoder"
 
 # Pointing to your fine-tuned reranker on Hugging Face Hub
 RERANKER_MODEL_URL = "https://api-inference.huggingface.co/models/parikshitup7/finetuned-medcpt-reranker"
