@@ -1,14 +1,14 @@
-import psycopg2
 import os
+import psycopg2
+from dotenv import load_dotenv
 
-# Fetch the URL from the environment (used in Docker).
-# If it doesn't exist, fall back to localhost for local terminal testing.
-DB_URL = os.getenv(
-    "DATABASE_URL", 
-    "postgresql://postgres:password@localhost:5432/clinical_rag"
-)
+# Load local .env file if present
+load_dotenv()
 
 def get_connection():
     """Returns a connection to the Postgres database."""
-    conn = psycopg2.connect(DB_URL)
-    return conn
+    db_url = os.getenv(
+        "DATABASE_URL", 
+        "postgresql://postgres:password@localhost:5432/clinical_rag"
+    )
+    return psycopg2.connect(db_url)
