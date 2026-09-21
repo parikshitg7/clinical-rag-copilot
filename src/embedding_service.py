@@ -18,13 +18,22 @@ RERANKER_MODEL = "parikshitup7/finetuned-medcpt-reranker"
 
 def generate_embedding(text: str) -> List[float]:
     """Converts a chunk of text into a vector using HF InferenceClient."""
+    # MedCPT max length is 512 tokens (~1,800 characters or ~380 words).
+    # Truncate text if it exceeds 1,800 characters to prevent tensor shape errors.
+    MAX_CHARS = 1800
+    if len(text) > MAX_CHARS:
+        text = text[:MAX_CHARS]
+
     response = client.feature_extraction(text, model=ARTICLE_MODEL)
     
     if hasattr(response, "tolist"):
-        return response.tolist()
-    if isinstance(response, list) and len(response) > 0 and isinstance(response[0], list):
-        return response[0]
-    return list(response)
+        response = response.tolist()
+        
+    # Flatten nested single-item lists (e.g., [[...]] -> [...])
+    while isinstance(response, list) and len(response) == 1 and isinstance(response[0], list):
+        response = response[0]
+        
+    return response
 
 
 def generate_query_embedding(query: str) -> List[float]:
@@ -36,6 +45,8 @@ def generate_query_embedding(query: str) -> List[float]:
     if isinstance(response, list) and len(response) > 0 and isinstance(response[0], list):
         return response[0]
     return list(response)
+
+
 
 
 def rerank_chunks(query: str, chunks: List[dict], top_n: int = 3) -> List[dict]:
