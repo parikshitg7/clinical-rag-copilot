@@ -56,14 +56,16 @@ def search_clinical_literature(
         
         results = []
         for chunk in ranked_chunks:
-            doc_id = chunk['parent_doc_id']
+            doc_id = chunk.get('parent_doc_id', '')
+            score = chunk.get('rerank_score', chunk.get('similarity', 0.0))
+            
             results.append(
                 SearchResult(
                     id=chunk['id'],
                     parent_doc_id=doc_id,
-                    section=chunk['section'],
+                    section=chunk.get('section') or '',
                     text=chunk['text'],
-                    score=chunk['rerank_score'],
+                    score=float(score),
                     url=build_pubmed_url(doc_id)
                 )
             )
@@ -83,7 +85,6 @@ def ask_clinical_question(
         raise HTTPException(status_code=400, detail="Query cannot be empty")
 
     try:
-        # 1. Retrieve & Rerank Context
         query_vector = generate_query_embedding(q)
         retrieved_chunks = search_similar_chunks(query_vector, limit=top_k)
         
@@ -97,27 +98,23 @@ def ask_clinical_question(
             
         ranked_chunks = rerank_chunks(q, retrieved_chunks, top_n=top_n)
         
-        # 2. Convert raw DB dicts into Chunk objects for the Graph (using 0-based index)
         chunk_objects = []
         for idx, c in enumerate(ranked_chunks):
             chunk_objects.append(
                 Chunk(
-                    parent_doc_id=c['parent_doc_id'],
-                    section=c['section'],
+                    parent_doc_id=c.get('parent_doc_id', ''),
+                    section=c.get('section') or '',
                     chunk_index=idx,
                     text=c['text']
                 )
             )
 
-        # 3. Hand off to the LangGraph Orchestrator
         initial_state = {
             "question": q,
             "chunks": chunk_objects,
         }
         
-        # Invoke the graph
         final_state = clinical_graph.invoke(initial_state)
-        
         return final_state["answer"]
 
     except Exception as e:

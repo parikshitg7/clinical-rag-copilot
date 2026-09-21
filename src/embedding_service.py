@@ -71,13 +71,28 @@ def rerank_chunks(query: str, chunks: List[dict], top_n: int = 3) -> List[dict]:
 
         scored_chunks = []
         for i, chunk in enumerate(chunks):
-            score = scores[i] if isinstance(scores, list) and i < len(scores) else 0.0
+            raw_score = scores[i] if isinstance(scores, list) and i < len(scores) else 0.0
+            
+            # Extract float score if HF returns a dict object like {'score': 0.85}
+            if isinstance(raw_score, dict):
+                score_val = float(raw_score.get("score", 0.0))
+            else:
+                score_val = float(raw_score)
+
             chunk_copy = chunk.copy()
-            chunk_copy["rerank_score"] = score
+            chunk_copy["rerank_score"] = score_val
             scored_chunks.append(chunk_copy)
 
-        scored_chunks.sort(key=lambda x: x.get("rerank_score", 0), reverse=True)
+        scored_chunks.sort(key=lambda x: x.get("rerank_score", 0.0), reverse=True)
         return scored_chunks[:top_n]
+
     except Exception as e:
         print(f"Reranking fallback triggered: {e}")
-        return chunks[:top_n]
+        # Fallback: copy chunks and use vector similarity score as rerank_score
+        fallback_chunks = []
+        for chunk in chunks[:top_n]:
+            c_copy = chunk.copy()
+            c_copy["rerank_score"] = float(c_copy.get("similarity", 0.0))
+            fallback_chunks.append(c_copy)
+            
+        return fallback_chunks
