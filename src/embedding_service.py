@@ -40,10 +40,14 @@ def generate_query_embedding(query: str) -> List[float]:
     """Converts a user query into a vector using HF InferenceClient."""
     response = client.feature_extraction(query, model=QUERY_MODEL)
     
+    # Convert numpy array / tensor to Python list if needed
     if hasattr(response, "tolist"):
-        return response.tolist()
-    if isinstance(response, list) and len(response) > 0 and isinstance(response[0], list):
-        return response[0]
+        response = response.tolist()
+        
+    # Unnest 2D/3D lists down to 1D (e.g., [[...]] -> [...])
+    while isinstance(response, list) and len(response) > 0 and isinstance(response[0], list):
+        response = response[0]
+        
     return list(response)
 
 

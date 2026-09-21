@@ -58,9 +58,12 @@ def get_unembedded_chunks() -> list[dict]:
 
 def update_chunk_embedding(chunk_id: int, embedding: list[float]):
     """Updates a specific chunk with its generated vector embedding."""
+    # Flatten 2D list to 1D vector if needed
+    if isinstance(embedding, list) and len(embedding) > 0 and isinstance(embedding[0], list):
+        embedding = embedding[0]
+
     conn = get_connection()
     cursor = conn.cursor()
-    # Cast the list of floats to a string format that pgvector accepts
     cursor.execute("""
         UPDATE chunks SET embedding = %s WHERE id = %s;
     """, (str(embedding), chunk_id))
@@ -73,11 +76,13 @@ def search_similar_chunks(query_embedding: list[float], limit: int = 5) -> list[
     Searches the database for chunks closest to the query embedding 
     using pgvector's cosine distance operator (<=>).
     """
+    # Defensive safeguard: ensure query_embedding is always 1D before formatting to string
+    while isinstance(query_embedding, list) and len(query_embedding) > 0 and isinstance(query_embedding[0], list):
+        query_embedding = query_embedding[0]
+
     conn = get_connection()
     cursor = conn.cursor(cursor_factory=RealDictCursor)
     
-    # We calculate 1 - distance to get a 'similarity score' (higher is better)
-    # We order by the closest distance ascending.
     cursor.execute("""
         SELECT id, parent_doc_id, section, chunk_index, text, 
                1 - (embedding <=> %s::vector) AS similarity 
