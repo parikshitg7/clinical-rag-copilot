@@ -12,6 +12,11 @@ services:
       - "5432:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d clinical_rag"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
 
   api:
     build: .
@@ -19,10 +24,10 @@ services:
     ports:
       - "8000:8000"
     environment:
-      # Notice the host here is 'db', which matches the service name above
       - DATABASE_URL=postgresql://postgres:password@db:5432/clinical_rag
     depends_on:
-      - db
+      db:
+        condition: service_healthy
 
 volumes:
   pgdata:

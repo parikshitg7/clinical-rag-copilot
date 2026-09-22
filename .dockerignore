@@ -3,3 +3,12 @@ env/
 __pycache__/
 .git/
 .pytest_cache/
+.venv/
+venv/
+models/
+__pycache__/
+.git/
+*.safetensors
+*.bin
+*.pt
+*.csv
