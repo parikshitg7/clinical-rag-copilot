@@ -31,3 +31,5 @@ models/
 venv/
 *.zip
 *.safetensors
+reportcopy.txt
+tests
