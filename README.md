@@ -589,36 +589,6 @@ The evaluation framework supports **checkpointing** — if interrupted, it resum
 
 The test suite covers unit, integration, and evaluation layers. Run tests against a live Docker stack for integration tests, or in isolation with mocks for unit tests.
 
-### Install Test Dependencies
-
-```bash
-pip install pytest pytest-mock
-```
-
-### Run Full Test Suite
-
-```bash
-# From repository root (with DATABASE_URL pointing to local Docker db)
-pytest tests/ -v
-```
-
-### Run Unit Tests Only (no DB/API required)
-
-```bash
-pytest tests/test_chunker.py tests/test_schema.py tests/test_parsers.py tests/test_pubmed_parser.py -v
-```
-
-### Run API Tests (uses FastAPI TestClient with mocks — no live server needed)
-
-```bash
-pytest tests/test_api.py tests/test_api_integration.py tests/test_api_verification.py -v
-```
-
-### Run LangGraph State Machine Tests
-
-```bash
-pytest tests/test_graph.py -v
-```
 
 These tests verify:
 - **Retry logic**: graph retries exactly once on a failed verification, then succeeds
@@ -719,7 +689,7 @@ docker push yourusername/clinical-rag-copilot:latest
 
 ## 👤 Author
 
-**Parikshit Gujrathi**
+**Parikshit Upadhyay**
 
 [![GitHub](https://img.shields.io/badge/GitHub-parikshitg7-181717?logo=github)](https://github.com/parikshitg7)
 [![HuggingFace](https://img.shields.io/badge/HuggingFace-parikshitup7-FFD21E?logo=huggingface&logoColor=black)](https://huggingface.co/parikshitup7)
