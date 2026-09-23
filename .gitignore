@@ -33,3 +33,4 @@ venv/
 *.safetensors
 reportcopy.txt
 src/eval
+tests/eval
